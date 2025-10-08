@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Ashraf — Portfolio</title>
+  <meta name="description" content="Senior Data Engineer — Portfolio, CV, and projects."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{
+      --bg:#0b1020; --panel:#121731; --muted:#8da2c0; --text:#e8efff; --brand:#6aa2ff; --brand-2:#2be3c7; --chip:#1c2446;
+      --shadow: 0 10px 25px rgba(0,0,0,.25), 0 2px 8px rgba(0,0,0,.2);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:'Cairo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#070b17, #0b1020 40%, #0e152b);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,16,32,.7);backdrop-filter:saturate(1.2) blur(10px);z-index:50;border-bottom:1px solid #1a2244}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav a{padding:10px 14px;border-radius:10px;color:var(--muted)}
+    .nav a:hover{background:#12193a;color:#cfe0ff}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .badge{font-size:12px;padding:6px 10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b1020;border-radius:999px;font-weight:700}
+    .hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:24px;align-items:center;padding:36px 0}
+    .card{background:linear-gradient(180deg,#0d1430, #0b1130);border:1px solid #1b2450;border-radius:18px;box-shadow:var(--shadow)}
+    .card.pad{padding:24px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,#2144ff22,#2be3c722);border:1px solid #2b3f7a;color:#cfe0ff}
+    .btn:hover{transform:translateY(-2px);transition:150ms ease;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid #2b386d;color:#cde; padding:6px 10px;border-radius:999px;font-size:12px}
+    .section{padding:16px 0 28px}
+    h1{font-size:38px;margin:0 0 10px}
+    h2{font-size:24px;margin:0 0 10px}
+    p{color:#b7c4df;line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    @media (max-width:960px){.hero{grid-template-columns:1fr}.col-6,.col-8,.col-4{grid-column:span 12}}
+    .timeline{position:relative;padding-left:24px}
+    .timeline::before{content:"";position:absolute;inset:0 auto 0 8px;width:2px;background:#243062;border-radius:2px}
+    .tl{position:relative;margin:0 0 16px;padding:12px 16px 12px 16px;background:#0f1635;border:1px solid #1b2860;border-radius:14px}
+    .tl::before{content:"";position:absolute;left:-10px;top:18px;width:12px;height:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));border-radius:50%;box-shadow:0 0 0 3px #0f1635}
+    .kpis{display:flex;gap:14px;flex-wrap:wrap}
+    .kpi{flex:1 1 180px;display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:#0f1533;border:1px solid #1c285c}
+    footer{padding:40px 0;color:#99a9cd}
+    .muted{color:#8da2c0}
+    .icon{width:18px;height:18px;display:inline-block;vertical-align:-3px}
+    .avatar{width:100%;aspect-ratio:1/1;border-radius:18px;background:linear-gradient(135deg,#1f2b57,#12204a);border:1px solid #1e2d63;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .proj{display:flex;flex-direction:column;gap:10px}
+    .proj .meta{display:flex;gap:10px;flex-wrap:wrap}
+    .proj .meta .chip{font-size:11px}
+    .langs{display:flex;gap:10px;flex-wrap:wrap}
+    .langs a{font-size:13px;color:#cfe0ff}
+    .langs a:hover{text-decoration:underline}
+    .contact a{display:inline-flex;align-items:center;gap:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><i data-lucide="sparkles" class="icon"></i> Mohamed Ashraf <span class="badge">Senior Data Engineer</span></div>
+      <nav class="langs">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a class="badge" href="#cv">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card pad">
+        <h1>Senior Data Engineer</h1>
+        <p>I design and build data platforms and governance solutions on the Microsoft Data Platform (SQL Server, SSIS/SSRS, Power BI/Fabric), aligning with NDMO/NORA standards. I focus on data integration, quality, and lineage across the enterprise.</p>
+        <div class="kpis">
+          <div class="kpi"><i data-lucide="clock" class="icon"></i><div><b>8+ yrs</b><div class="muted">experience</div></div></div>
+          <div class="kpi"><i data-lucide="monitor" class="icon"></i><div><b>50+</b><div class="muted">BI dashboards</div></div></div>
+          <div class="kpi"><i data-lucide="shield-check" class="icon"></i><div><b>NDMO</b><div class="muted">alignment</div></div></div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="#projects"><i data-lucide="folder-open" class="icon"></i> Explore Projects</a>
+          <a class="btn" href="#contact"><i data-lucide="send" class="icon"></i> Contact</a>
+        </div>
+      </div>
+      <div class="card pad">
+        <div class="avatar" style="height:100%"><picture><source srcset="assets/profile-square-1000.webp" type="image/webp"/><img src="assets/profile-square-1000.jpg" alt="Portrait of Mohamed Ashraf" loading="eager" decoding="async" onerror="this.style.display='none'"/></picture></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="grid">
+        <div class="col-8">
+          <div class="card pad">
+            <h2>About</h2>
+            <p>Senior Data Engineer with a strong background in designing, developing, and deploying data-driven solutions. Proficient in ETL using SSIS, data modeling and analytics (SSAS), and report development (SSRS). Experienced with interactive dashboards and visualizations (Power BI, Tableau, MicroStrategy) to support decision-making. Comfortable in dynamic environments, delivering scalable and efficient data solutions.</p>
+            <div class="chips" style="margin-top:10px">
+              <span class="chip">SQL Server</span>
+              <span class="chip">SSIS · SSRS · SSAS</span>
+              <span class="chip">Power BI · Fabric</span>
+              <span class="chip">OpenMetadata</span>
+              <span class="chip">Erwin Data Intelligence</span>
+              <span class="chip">Data Governance · NDMO · NORA</span>
+              <span class="chip">Python · Docker · Airflow</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card pad">
+            <h2 id="cv">Curriculum Vitae</h2>
+            <p>Download the latest PDF:</p>
+            <a class="btn" href="assets/Mohamed-Ashraf-CV.pdf" download><i data-lucide="download" class="icon"></i> Download CV</a>
+            <p class="muted" style="margin-top:8px">Place your file at <code>assets/Mohamed-Ashraf-CV.pdf</code> in the repo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="card pad">
+        <h2>Core Skills</h2>
+        <div class="chips" style="margin-top:8px">
+          <span class="chip">Data Modeling</span>
+          <span class="chip">ETL/ELT</span>
+          <span class="chip">Data Quality</span>
+          <span class="chip">Lineage</span>
+          <span class="chip">Governance</span>
+          <span class="chip">TOGAF (EA)</span>
+          <span class="chip">Fabric · Power BI</span>
+          <span class="chip">Docker · Airflow</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 style="margin-bottom:10px">Selected Projects</h2>
+      <div class="grid">
+        <div class="col-6">
+          <div class="card pad proj">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <b>Enterprise Architecture Data Warehouse</b>
+              <a class="chip" href="https://github.com/m7md144/EA-DW" target="_blank"><i data-lucide="github" class="icon"></i> Repo</a>
+            </div>
+            <p>Designed a warehouse for EA layers (Applications, Business, Data, Technology) with snapshots, retention policies, and data quality checks.</p>
+            <div class="meta">
+              <span class="chip">SQL Server</span>
+              <span class="chip">SSIS</span>
+              <span class="chip">Data Governance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card pad proj">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <b>Power BI Governance Toolkit</b>
+              <a class="chip" href="https://github.com/m7md144/pbi-governance" target="_blank"><i data-lucide="link" class="icon"></i> Demo</a>
+            </div>
+            <p>Compliance, quality, and lineage monitoring across Fabric/Power BI with OpenMetadata integration.</p>
+            <div class="meta">
+              <span class="chip">Power BI</span>
+              <span class="chip">Fabric</span>
+              <span class="chip">OpenMetadata</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card pad proj">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <b>OpenMetadata Ingestion & Lineage</b>
+              <span class="chip">WIP</span>
+            </div>
+            <p>Setting up connectors to ingest metadata and lineage from multiple sources (SQL Server, PBIRS, SharePoint).</p>
+            <div class="meta">
+              <span class="chip">Docker</span>
+              <span class="chip">Airflow</span>
+              <span class="chip">Python</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card pad proj">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <b>Arabic Metamodel Visualizer</b>
+              <a class="chip" href="https://github.com/m7md144/metamodel-ar" target="_blank"><i data-lucide="github" class="icon"></i> Repo</a>
+            </div>
+            <p>An Arabic interactive visualizer for entity-relationship models using vis-network.</p>
+            <div class="meta">
+              <span class="chip">HTML/JS</span>
+              <span class="chip">vis-network</span>
+              <span class="chip">UX Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="grid">
+        <div class="col-12">
+          <div class="card pad timeline">
+            <h2>Experience</h2>
+            <div class="tl">
+              <b>Data Governance Consultant (NDMO) — SFDA (Outsource), Comprehensive Technology Company</b>
+              <div class="muted">Feb 2024 — Present · Riyadh</div>
+              <p>Led metadata and business glossary in Erwin DI; built data quality checks and lineage; aligned governance with NDMO standards.</p>
+            </div>
+            <div class="tl">
+              <b>Data Management Consultant — Jadara Solutions</b>
+              <div class="muted">Nov 2022 — Feb 2024 · Riyadh</div>
+              <p>Developed SSIS packages, SSRS reports, and Power BI models for HRDF; optimized SQL and automated reporting schedules.</p>
+            </div>
+            <div class="tl">
+              <b>Business Intelligence Developer — Smart Way Technology</b>
+              <div class="muted">Jun 2021 — Jun 2022 · Riyadh</div>
+              <p>Built 12 Power BI dashboards; implemented FSLDM-based models in Teradata; developed DW structures and advanced SQL.</p>
+            </div>
+            <div class="tl">
+              <b>Business Intelligence Developer — Master Works</b>
+              <div class="muted">Jun 2017 — Jun 2021 · Riyadh</div>
+              <p>Delivered MicroStrategy/Tableau analytics for STC, Qassim, RCJ, and GAZT; integrated Twitter streaming data for analytics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & EDUCATION -->
+    <section id="certs" class="section">
+      <div class="grid">
+        <div class="col-6">
+          <div class="card pad">
+            <h2>Certifications</h2>
+            <ul>
+              <li>CDMP — Associate (DAMA, 2025) — <a target="_blank" href="https://eu.credential.net/83524d7f-65ef-4043-9a5d-eb782bcc904b">verify</a></li>
+              <li>MicroStrategy — Analyst (2020) — <a target="_blank" href="https://www.credential.net/45ede216-d30b-435a-a7ca-0fb6e32bb8aa">verify</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card pad">
+            <h2>Education</h2>
+            <p><b>Bachelor of Computer Science</b><br/>Modern Academy, Cairo — 2015</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="card pad contact">
+        <h2>Contact</h2>
+        <p>Open to consulting or full-time opportunities.</p>
+        <div class="chips" style="margin-top:6px">
+          <a class="chip" href="mailto:m7md.ashraf92@gmail.com"><i data-lucide="mail" class="icon"></i> m7md.ashraf92@gmail.com</a>
+          <a class="chip" href="https://wa.me/966504167242" target="_blank"><i data-lucide="phone" class="icon"></i> +966 50 416 7242</a>
+          <a class="chip" href="https://www.linkedin.com/in/medoz144" target="_blank"><i data-lucide="linkedin" class="icon"></i> LinkedIn</a>
+          <a class="chip" href="https://github.com/m7md144" target="_blank"><i data-lucide="github" class="icon"></i> GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="muted">© <span id="y"></span> Mohamed Ashraf — All rights reserved.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
