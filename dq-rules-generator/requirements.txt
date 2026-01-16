@@ -1,0 +1,33 @@
+# DQ Rules Generator - Dependencies
+# Data Quality and Business Rules Generator Application
+
+# Excel Processing
+openpyxl>=3.1.2
+pandas>=2.0.0
+xlsxwriter>=3.1.9
+
+# Database Schema Parsing
+sqlparse>=0.4.4
+
+# Configuration
+pyyaml>=6.0.1
+
+# CLI Interface
+click>=8.1.7
+rich>=13.7.0
+
+# Text Processing (for Arabic)
+python-bidi>=0.4.2
+arabic-reshaper>=3.0.0
+
+# Fuzzy Matching for Relationship Inference
+rapidfuzz>=3.6.1
+
+# Data Profiling (Optional)
+ydata-profiling>=4.6.0
+
+# Logging
+loguru>=0.7.2
+
+# Type Hints
+typing-extensions>=4.9.0

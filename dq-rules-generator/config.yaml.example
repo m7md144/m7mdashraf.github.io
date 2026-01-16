@@ -1,0 +1,30 @@
+# DQ Rules Generator - Configuration Example
+# ==========================================
+
+# System identification
+system_name: "Legal Case Management System"
+database_name: "LegalDB"
+default_schema: "dbo"
+
+# Rule generation settings
+timeliness_threshold_days: 30    # Days threshold for timeliness checks
+min_relationship_confidence: 0.6  # Minimum confidence for inferred relationships (0-1)
+
+# Critical fields (will always get HIGH severity)
+critical_fields:
+  - "NationalId"
+  - "CaseNumber"
+  - "JudgmentId"
+  - "PersonId"
+
+# Output settings
+output_directory: "./output"
+include_sql_file: true
+include_summary: true
+
+# Column mapping overrides (if your Data Dictionary uses different column names)
+column_mappings:
+  # Uncomment and modify as needed
+  # table_name: "Entity Name"
+  # column_name: "Field Name"
+  # data_type: "Type"
